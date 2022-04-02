@@ -1,0 +1,57 @@
+.container{
+    width: 100%;
+    display: flex;
+}
+.column{
+    width: 50%;
+    height: 500px;
+    padding: 5px;
+    border: 1px solid gray;
+    overflow: hidden;
+}
+.php-container{
+    padding: 10px;
+}
+.form-container{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.ml-5{
+    margin-left: 5px;
+}
+.w-200{
+    width: 200px;
+}
+.delivery-buttons-container{
+    display: flex;
+}
+.leaflet-container{
+    width: 100vh;
+    height: 100vh;
+}
+.clickRowStyl {
+    background-color:#00b4ed;
+}
+.ant-table-tbody>.clickRowStyl:hover>td {
+    background-color: #00b4ed;
+    cursor: pointer;
+}
+.ant-table-tbody>tr {
+    /*background-color: #00b4ed;*/
+    cursor: pointer;
+}
+.resizable{
+    resize: horizontal;
+    width: 75%;
+    min-width: 400px;
+}
+.select{
+    width: 125px;
+}
+.w-auto{
+    width: auto;
+}
