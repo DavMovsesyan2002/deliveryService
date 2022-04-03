@@ -28,15 +28,17 @@ const Index = () => {
     ])
     const [zoom,setZoom] = useState(13)
 
-
+    const handleConfirm = (e) => {
+        e.stopPropagation();
+    }
 
     useEffect(() => {
         setDataSource(selector.map.dataSource)
     },[selector])
 
-
     useEffect(() => {
         if(to === "Brighton"){
+            setZoom(7);
             setRouteTo([50.869, -0.09]);
             setPolyline ([[50.869, -0.09],
                 [51.51, -0.1],
@@ -77,7 +79,7 @@ const Index = () => {
             dataIndex: 'to',
             key: 'to',
             render: (text, record) => (
-                <Space size="middle">
+                <Space size="middle" onClick={handleConfirm}>
                     <Select defaultValue="london" className='select' onChange={handleChangeTo}>
                         {selectOptionData.map((item) =>{
                             return <Option key={item.key} value={item.name}>{item.name}</Option>
@@ -92,6 +94,7 @@ const Index = () => {
     const onClickRow = (record) => {
         return {
             onClick: () => {
+                console.log(record)
                 setRowOfTableKey(
                     record.key,
                 );

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL: 'http://localhost/backend/Fast_delivery/',
+    baseURL: 'http://localhost/deliveryService/backend/Fast_delivery/',
     headers: {
         'Accept': 'application/vnd.GitHub.v3+json',
     },

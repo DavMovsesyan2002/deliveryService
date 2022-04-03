@@ -83,9 +83,10 @@ export const mapReducer = (state = defaultState, action) => {
     switch (action.type){
         case TO:
            return {...state, dataSource: state.dataSource.map(obj => {
-                console.log( action.payload.to)
                 if (obj.key === action.payload.rowOfTableKey) {
-                    return {...obj, to: action.payload.to};
+                    console.log(action.payload.zoom,"zoomValue")
+                    console.log(obj,"obj")
+                    return {...obj, to: action.payload.to, name: "sdsadsahgdshb", zoom: 7};
                 }
                 return obj;
             })}
